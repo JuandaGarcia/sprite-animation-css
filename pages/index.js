@@ -1,4 +1,5 @@
 import React from 'react'
+import Head from 'next/head'
 import styles from '../styles/Home.module.css'
 import { useSpring, animated } from 'react-spring'
 
@@ -18,6 +19,9 @@ const Index = () => {
 
 	return (
 		<div className={styles.container}>
+			<Head>
+				<title>Sprite Animation</title>
+			</Head>
 			<animated.div
 				className={styles.card}
 				onMouseMove={({ clientX: x, clientY: y }) => set({ xys: calc(x, y) })}
